@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.NotesActivity">
+
+<!--    <FrameLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:id="@+id/notepad_fragment"-->
+<!--        android:visibility="gone"-->
+<!--        android:layout_height="match_parent"/>-->
+    <RelativeLayout
+        android:id="@+id/rl3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <TextView
+        android:id="@+id/editFolders_inside_folder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edit"
+        android:padding="6dp"
+        android:textSize="19sp"
+        android:layout_marginEnd="8dp"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorYellow"
+        />
+
+    <LinearLayout
+        android:layout_below="@id/editFolders_inside_folder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/folder_name_notes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:padding="5dp"
+                android:text="FolderName"
+                android:textColor="@android:color/white"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                >
+
+            </TextView>
+            <TextView
+                android:id="@+id/folder_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:text="-1"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                >
+
+            </TextView>
+
+
+        </LinearLayout>
+
+
+                    <SearchView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:clickable="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/search_bg"
+
+                        />
+
+
+
+
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_margin="20dp"
+    android:layout_marginBottom="50dp"
+
+    android:layout_height="wrap_content">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/inside_folder_recycler_view"
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        tools:ignore="MissingConstraints" />
+
+
+</com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:id="@+id/rl7"
+            android:layout_alignParentBottom="true"
+
+            android:background="@color/color_taskBar"
+            >
+
+           <TextView
+               android:id="@+id/num_of_notes_inside_folder"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="1 Note"
+               android:gravity="center_vertical"
+               android:layout_centerInParent="true"
+               android:layout_marginBottom="14dp"
+
+               android:textSize="14sp"
+               />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_vertical"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/create_new_note_inside_folder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_create_24"
+                    />
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+</RelativeLayout>
+
+
+</RelativeLayout>
