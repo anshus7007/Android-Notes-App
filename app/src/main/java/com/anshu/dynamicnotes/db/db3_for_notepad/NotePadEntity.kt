@@ -7,11 +7,15 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "notepad_entity")
 
 data class NotePadEntity (
-    @ColumnInfo(name="note_id")
-    var note_id:Int,
+//    @ColumnInfo(name="note_id")
+//    var note_id:Int,
+        @PrimaryKey()
+        var notepad_id:String,
     @ColumnInfo(name="notepad_name")
     var notePad_name:String,
 
+        @ColumnInfo(name="time")
+        var time:String,
     @ColumnInfo(name="note_pad_data")
     var notepad_data:String,
 
@@ -23,6 +27,5 @@ data class NotePadEntity (
 
     )
 {
-    @PrimaryKey(autoGenerate = true)
-    var notepad_id:Int?=null
+
 }

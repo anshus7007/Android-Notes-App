@@ -9,9 +9,13 @@ import androidx.room.PrimaryKey
 data class NotesEntity (
     @ColumnInfo(name="folder_id")
     var folder_id:Int,
+    @ColumnInfo(name="folder_name")
+    var folder_name:String,
     @ColumnInfo(name="notes_name")
     var notes_name:String,
 
+    @ColumnInfo(name="body")
+    var body:String,
     @ColumnInfo(name="notes_time")
     var time:String,
 

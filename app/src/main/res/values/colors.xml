@@ -7,4 +7,19 @@
     <color name="ghostWhiteSearch">#F9F9F9</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+
+    <color name="colorPrimary">#01A3F4</color>
+    <color name="colorPrimaryDark">#1D2530</color>
+    <color name="colorAccent">#01A3F4</color>
+    <color name="colorSurface">#334053</color>
+    <color name="colorCard">#334053</color>
+    <color name="colorText">#F1EBF2</color>
+    <color name="colorTextLight">#F0EAF4</color>
+    <color name="colorBackground">#1D2530</color>
+    <color name="colorInputBorder">#F0EAF4</color>
+    <color name="splashBg">@color/colorBackground</color>
+    <color name="statusBarColor">@color/colorBackground</color>
+    <color name="share_background">#fff</color>
 </resources>

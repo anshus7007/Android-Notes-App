@@ -20,6 +20,7 @@
 
 
             <TextView
+                android:id="@+id/rename_folder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New Folder"
@@ -27,6 +28,7 @@
                 android:textStyle="bold"
                 android:textColor="@android:color/white"/>
             <TextView
+                android:id="@+id/rename_folder_sub"
                 android:layout_width="wrap_content"
                 android:layout_marginTop="2dp"
                 android:layout_height="wrap_content"

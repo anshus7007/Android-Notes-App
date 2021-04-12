@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:text="@string/edit"
         android:padding="6dp"
+        android:visibility="invisible"
         android:textSize="19sp"
         android:layout_marginRight="8dp"
         android:layout_alignParentEnd="true"
@@ -118,14 +119,15 @@
             android:src="@drawable/ic_baseline_folder_24"
          />
 
-        <ImageView
-            android:id="@+id/create_new_note"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginRight="10dp"
-            android:layout_alignParentEnd="true"
-            android:src="@drawable/ic_baseline_create_24"
-            />
+<!--        <ImageView-->
+<!--            android:id="@+id/create_new_note"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:visibility="invisible"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:src="@drawable/ic_baseline_create_24"-->
+<!--            />-->
 
 
     </RelativeLayout>

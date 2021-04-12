@@ -22,4 +22,11 @@ interface FoldersDao {
 
     @Query("select * from folders_entity where id = :id")
     fun getFolderForNotes(id: Int?): FoldersEntity?
+
+
+    @Query("update folders_entity set no_of_notes = :no_of_notes where id = :fileId")
+    suspend fun updateNumOfNotes(no_of_notes:String, fileId: Int)
+
+    @Query("update folders_entity set folders_name = :folders_name,folders_date= :currentDateAndTime,color_picker=:color_picker where id = :folder_id")
+    suspend fun rename_folder(folder_id:Int,folders_name:String,currentDateAndTime:String,color_picker: String)
 }

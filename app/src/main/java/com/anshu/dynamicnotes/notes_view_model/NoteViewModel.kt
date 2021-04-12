@@ -18,6 +18,11 @@ class NoteViewModel(private val repository: NotesRepository): ViewModel() {
         repository.delete_note(item)
     }
 
+    fun updateLock(notes_lock:Boolean, fileId: Int) = CoroutineScope(Dispatchers.Main).launch {
+        repository.updateLock(notes_lock,fileId)
+    }
     fun getAllNotes() = repository.getAllNotes()
     fun getNoteById(id: Int) = repository.getNoteById(id)
+    fun updateNote(title:String,body:String,time:String,id:Int) = CoroutineScope(Dispatchers.Main).launch {repository.updateNote(title,body,time,id)}
+
 }

@@ -18,6 +18,12 @@ class FolderViewModel(private val repository:FoldersRepository):ViewModel() {
         repository.delete(item)
     }
     fun getAllFolders()=repository.getAllFolders()
-
+    fun rename_folder(folder_id:Int,folders_name:String,currentDateAndTime:String,color_picker: String) = CoroutineScope(Dispatchers.Main).launch {
+        repository.rename_folder(folder_id,folders_name,currentDateAndTime,color_picker)
+    }
     fun getFolderById(id:Int)=repository.getFolderById(id)
+
+    fun updateNumOfNotes(no_of_notes:String, fileId: Int)= CoroutineScope(Dispatchers.Main).launch {
+        repository.updateNumOfNotes(no_of_notes,fileId)
+    }
 }

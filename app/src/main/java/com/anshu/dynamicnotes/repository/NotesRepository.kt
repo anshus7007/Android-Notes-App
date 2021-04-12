@@ -10,4 +10,7 @@ class NotesRepository(private val db: NotesDatabase) {
     suspend fun delete_note(item: NotesEntity)=db.getNotesDao().delete(item)
     fun getAllNotes()=db.getNotesDao().getAllNotes()
      fun getNoteById(id:Int)=db.getNotesDao().getNoteById(id)
+suspend    fun updateNote(title:String,body:String,time:String,id: Int) = db.getNotesDao().updateNotes(title,body,time,id)
+    suspend    fun updateLock(notes_lock:Boolean, fileId: Int) = db.getNotesDao().updateLock(notes_lock, fileId)
+
 }

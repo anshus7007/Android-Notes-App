@@ -23,4 +23,10 @@ interface NotesDao {
 
     @Query("select * from notes_entity where folder_id = :id")
      fun getNoteById(id: Int): LiveData<List<NotesEntity>>
+
+    @Query("update notes_entity set notes_lock = :notes_lock where notes_id = :fileId")
+    suspend fun updateLock(notes_lock:Boolean, fileId: Int)
+
+    @Query("update notes_entity set notes_time = :time,notes_name= :title,body=:body where notes_id = :fileId")
+    suspend fun updateNotes(title:String,body:String,time: String, fileId: Int)
 }

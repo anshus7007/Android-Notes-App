@@ -28,7 +28,7 @@
                 android:id="@+id/notes_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="20dp"
                 android:text="Folder1"
                 android:textSize="18sp"
                 android:padding="5dp"
@@ -36,6 +36,7 @@
             <ImageView
                 android:layout_width="12dp"
                 android:layout_height="12dp"
+                android:visibility="invisible"
                 android:src="@drawable/ic_lock"
                 android:layout_marginTop="10dp"
 
@@ -60,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="	#777777"
                 android:text="Date"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="20dp"
                 android:layout_gravity="center_horizontal"
                 android:padding="3dp"
                 android:textSize="10sp"/>
@@ -79,7 +80,7 @@
     <View
         android:layout_marginTop="2dp"
         android:layout_width="match_parent"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="20dp"
         android:layout_alignBottom="@+id/ll1"
         android:layout_height="0.01dp"
         android:background="#777777"/>

@@ -17,8 +17,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.NotesActivity"></activity>
-        <activity android:name=".ui.activity.NotePadActivity"></activity>
+        <activity android:name=".ui.activity.NotesActivity" />
+        <activity
+            android:name=".ui.activity.NotePadActivity"
+            android:windowSoftInputMode="adjustResize" />
 
     </application>
 

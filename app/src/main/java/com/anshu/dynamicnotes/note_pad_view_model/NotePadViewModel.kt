@@ -7,6 +7,7 @@ import com.anshu.dynamicnotes.repository.NotePadRepaository
 import com.anshu.dynamicnotes.repository.NotesRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
 class NotePadViewModel(private val repository: NotePadRepaository): ViewModel() {
@@ -21,5 +22,12 @@ class NotePadViewModel(private val repository: NotePadRepaository): ViewModel() 
     }
 
     fun getAllNotepad() = repository.getAllNotePad()
-    fun getNotePadById(id: Int) = repository.getAllNotePadById(id)
+    fun getNotePadById(id: String) = CoroutineScope(Dispatchers.Main).launch {repository.getAllNotePadById(id)}
+
+    fun updateNote(time:String,id:String) = CoroutineScope(Dispatchers.Main).launch {
+        repository.updateNote(time,id)
+    }
+    fun getNotePadTitle(id:String): Job = CoroutineScope(Dispatchers.Main).launch {repository.getNotePadTitle(id)}
+    fun getNotePadBody(id:String): Job = CoroutineScope(Dispatchers.Main).launch {repository.getNotePadBody(id)}
+
 }

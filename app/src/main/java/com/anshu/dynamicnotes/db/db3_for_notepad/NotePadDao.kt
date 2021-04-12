@@ -2,7 +2,7 @@ package com.anshu.dynamicnotes.db.db3_for_notepad
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.anshu.dynamicnotes.db.db2_for_notes.NotesEntity
+import java.util.*
 
 @Dao
 
@@ -23,5 +23,14 @@ interface NotePadDao {
     fun getAllNotePad(): LiveData<List<NotePadEntity>>
 
     @Query("select * from notepad_entity where notepad_id = :id")
-    fun getNotePadById(id: Int?): NotePadEntity?
+    suspend fun getNotePadById(id: String?): NotePadEntity?
+
+    @Query("select notepad_name from notepad_entity where notepad_id = :id")
+    suspend fun getNotePadTitle(id: String): String
+
+    @Query("select note_pad_data from notepad_entity where notepad_id = :id")
+    suspend fun getNotePadBody(id: String): String
+
+    @Query("update notepad_entity set time = :time where notepad_id = :fileId")
+    suspend fun updateNote(time: String, fileId: String)
 }
